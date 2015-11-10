@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_process_erp_transaction" default="compile.module.process_erp_transaction">
+  <dirname property="module.process_erp_transaction.basedir" file="${ant.file.module_process_erp_transaction}"/>
+  
+  <property name="module.jdk.home.process_erp_transaction" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.process_erp_transaction" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.process_erp_transaction" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.process_erp_transaction" value="-encoding x-windows-874 -source 1.7 ${compiler.args}"/>
+  
+  <property name="process_erp_transaction.output.dir" value="${module.process_erp_transaction.basedir}/out/production/Process_ERP_Transaction"/>
+  <property name="process_erp_transaction.testoutput.dir" value="${module.process_erp_transaction.basedir}/out/test/Process_ERP_Transaction"/>
+  
+  <path id="process_erp_transaction.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="process_erp_transaction.module.production.classpath">
+    <path refid="${module.jdk.classpath.process_erp_transaction}"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  <path id="process_erp_transaction.runtime.production.module.classpath">
+    <pathelement location="${process_erp_transaction.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  <path id="process_erp_transaction.module.classpath">
+    <path refid="${module.jdk.classpath.process_erp_transaction}"/>
+    <pathelement location="${process_erp_transaction.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  <path id="process_erp_transaction.runtime.module.classpath">
+    <pathelement location="${process_erp_transaction.testoutput.dir}"/>
+    <pathelement location="${process_erp_transaction.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.process_erp_transaction">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.process_erp_transaction">
+    <patternset refid="excluded.from.module.process_erp_transaction"/>
+  </patternset>
+  
+  <path id="process_erp_transaction.module.sourcepath">
+    <dirset dir="${module.process_erp_transaction.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.process_erp_transaction" depends="compile.module.process_erp_transaction.production,compile.module.process_erp_transaction.tests" description="Compile module Process_ERP_Transaction"/>
+  
+  <target name="compile.module.process_erp_transaction.production" depends="register.custom.compilers" description="Compile module Process_ERP_Transaction; production classes">
+    <mkdir dir="${process_erp_transaction.output.dir}"/>
+    <javac2 destdir="${process_erp_transaction.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.process_erp_transaction}/javac">
+      <compilerarg line="${compiler.args.process_erp_transaction}"/>
+      <bootclasspath refid="process_erp_transaction.module.bootclasspath"/>
+      <classpath refid="process_erp_transaction.module.production.classpath"/>
+      <src refid="process_erp_transaction.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.process_erp_transaction"/>
+    </javac2>
+    
+    <copy todir="${process_erp_transaction.output.dir}">
+      <fileset dir="${module.process_erp_transaction.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.process_erp_transaction.tests" depends="register.custom.compilers,compile.module.process_erp_transaction.production" description="compile module Process_ERP_Transaction; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.process_erp_transaction" description="cleanup module">
+    <delete dir="${process_erp_transaction.output.dir}"/>
+    <delete dir="${process_erp_transaction.testoutput.dir}"/>
+  </target>
+</project>
