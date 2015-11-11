@@ -21,8 +21,8 @@ public class IMP_Process_transactionDB {
     public void generater_transaction_process(String date_from, String date_to, String process_id, String table, String doc_type, String r, String username) throws Exception {
         String Str_Writer, SQL, prod_cond, table_h, table_d, table_cred = "mcredit";
         //DBConnect objcon = new DBConnect();
-        Connection con_mysql = new DBConnect().openMySQLDBConnection();
-        Connection con_postgress = new DBConnect().openERPConnection();
+        Connection con_mysql = new DBConnect().openMySQLConnection_Y();
+        Connection con_postgress = new DBConnect().openConnection_ERP_Y();
         ResultSet rs = null;
         objuti = new UtiDatabase();
         java.util.Date date = new java.util.Date();

@@ -37,6 +37,20 @@ public class DBConnect {
     public String db_mysql_username = "";
     public String db_mysql_password = "";
 
+    public String DB_PG_Srv = "cgc-rv016.dyndns.org:5432/";
+    public String DB_PG_Center_Srv = "cgc-rv016.dyndns.org:5425/";
+    public String DB_MY_Srv = "bw-rv016.dyndns.org:3306/";
+    public String DB_MA = "MADB_PRODUCT_2558";
+    public String DB_ERP = "CGCDB_PRODUCT_2558";
+    public String DB_CENTER = "CMMS_CENTER_DB";
+    public String DB_My_Weight = "genius_data";
+    public String DB_PG_User = "cG9zdGdyZXM=";
+    public String DB_PG_Pass = "U3VwZXJBZG1pbjAwNw==";
+    public String DB_MY_Weight_User = "Y2dj";
+    public String DB_MY_Weight_Pass = "c3lzdGVtYWRtaW4=";
+    public String DB_Center_User = "Y2djZGJh";
+    public String DB_Center_Pass = "U0FkbWluMDA3";
+
     public DBConnect() {
     }
 
@@ -47,7 +61,7 @@ public class DBConnect {
         }
     }
 
-    public Connection openERPConnection() throws Exception {
+    public Connection openConnection_ERP_Y() throws Exception {
         Connection conn;
         Class.forName("org.postgresql.Driver");
         ReadXMLConfig();
@@ -61,7 +75,21 @@ public class DBConnect {
         return conn;
     }
 
-    public Connection openCMMSConnection() throws Exception {
+    public Connection openConnection_ERP_X() throws Exception {
+        Connection conn;
+        Class.forName("org.postgresql.Driver");
+        ReadXMLConfig();
+        String CONNECTION_DB = db_postgres_jdbc + DB_PG_Srv + DB_ERP;
+        byte[] user_decode = Base64.decodeBase64(DB_PG_User);
+        byte[] pass_decode = Base64.decodeBase64(DB_PG_Pass);
+        conn = DriverManager.getConnection(CONNECTION_DB, new String(user_decode), new String(pass_decode));
+        if (conn == null) {
+            throw new SQLException("Cannot initial database connection, because it's NULL.");
+        }
+        return conn;
+    }
+
+    public Connection openConnection_CMMS_Y() throws Exception {
         Connection conn;
         Class.forName("org.postgresql.Driver");
         ReadXMLConfig();
@@ -75,13 +103,13 @@ public class DBConnect {
         return conn;
     }
 
-    public Connection openCenterDBConnection() throws Exception {
+    public Connection openConnection_CMMS_X() throws Exception {
         Connection conn;
         Class.forName("org.postgresql.Driver");
         ReadXMLConfig();
-        String CONNECTION_DB = db_postgres_jdbc + server_center + db_postgres_dbcenter;
-        byte[] user_decode = Base64.decodeBase64(db_postgres_center_user);
-        byte[] pass_decode = Base64.decodeBase64(db_postgres_center_pass);
+        String CONNECTION_DB = db_postgres_jdbc + DB_PG_Srv + DB_MA;
+        byte[] user_decode = Base64.decodeBase64(DB_PG_User);
+        byte[] pass_decode = Base64.decodeBase64(DB_PG_Pass);
         conn = DriverManager.getConnection(CONNECTION_DB, new String(user_decode), new String(pass_decode));
         if (conn == null) {
             throw new SQLException("Cannot initial database connection, because it's NULL.");
@@ -89,7 +117,7 @@ public class DBConnect {
         return conn;
     }
 
-    public Connection openMySQLDBConnection() throws Exception {
+    public Connection openMySQLConnection_Y() throws Exception {
         Connection conn;
         Class.forName("com.mysql.jdbc.Driver");
         ReadXMLConfig();
@@ -103,14 +131,61 @@ public class DBConnect {
         return conn;
     }
 
-    public void ReadXMLConfig() throws Exception {
-        XPath xpath = XPathFactory.newInstance().newXPath();
-        InputSource inputSource = new InputSource("cgc_config.xml");
-        try {
+    public Connection openMySQLConnection_X() throws Exception {
+        Connection conn;
+        Class.forName("com.mysql.jdbc.Driver");
+        ReadXMLConfig();
+        String CONNECTION_DB = db_mysql_jdbc + DB_MY_Srv + DB_My_Weight;
+        byte[] user_decode = Base64.decodeBase64(DB_MY_Weight_User);
+        byte[] pass_decode = Base64.decodeBase64(DB_MY_Weight_Pass);
+        conn = DriverManager.getConnection(CONNECTION_DB, new String(user_decode), new String(pass_decode));
+        if (conn == null) {
+            throw new SQLException("Cannot initial database connection, because it's NULL.");
+        }
+        return conn;
+    }
 
-            //System.out.println("In Class");
-            //System.out.println("xpath = " + xpath );
-            //System.out.println("inputSource = " + inputSource );
+    public Connection openConnection_Center_Y() throws Exception {
+        Connection conn;
+        Class.forName("org.postgresql.Driver");
+        ReadXMLConfig();
+        String CONNECTION_DB = db_postgres_jdbc + server_center + db_postgres_dbcenter;
+        byte[] user_decode = Base64.decodeBase64(db_postgres_center_user);
+        byte[] pass_decode = Base64.decodeBase64(db_postgres_center_pass);
+        conn = DriverManager.getConnection(CONNECTION_DB, new String(user_decode), new String(pass_decode));
+        if (conn == null) {
+            throw new SQLException("Cannot initial database connection, because it's NULL.");
+        }
+        return conn;
+    }
+
+    public Connection openConnection_Center_X() throws Exception {
+        Connection conn;
+        Class.forName("org.postgresql.Driver");
+        ReadXMLConfig();
+        String CONNECTION_DB = db_postgres_jdbc + DB_PG_Center_Srv + DB_CENTER;
+        byte[] user_decode = Base64.decodeBase64(DB_Center_User);
+        byte[] pass_decode = Base64.decodeBase64(DB_Center_Pass);
+        conn = DriverManager.getConnection(CONNECTION_DB, new String(user_decode), new String(pass_decode));
+        if (conn == null) {
+            throw new SQLException("Cannot initial database connection, because it's NULL.");
+        }
+        return conn;
+    }
+
+    public void ReadXMLConfig() throws Exception {
+
+        XPath xpath = XPathFactory.newInstance().newXPath();
+
+        String XML_File = System.getProperty("os.name").substring(0, 3).toUpperCase().equals("WIN") ? "cgc_config.xml" : "/opt/taskapp/cgc_config.xml";
+
+        System.out.println("System = " + System.getProperty("os.name").substring(0, 3));
+
+        InputSource inputSource = new InputSource(XML_File);
+        try {
+            System.out.println("In Class");
+            System.out.println("xpath = " + xpath);
+            System.out.println("inputSource = " + inputSource);
             db_postgres_server = xpath.evaluate("//server", inputSource);
             db_postgres_server_bw = xpath.evaluate("//server_bw", inputSource);
 

@@ -27,7 +27,7 @@ public class Process_transaction_rawmat_DB {
 
     public void generater_transaction_process(String date_from, String date_to, String process_id, String table, String doc_type, String r, String username) throws Exception {
         ArrayList<DataBean_Transaction_Process> obj_AL_process_transaction = new ArrayList<DataBean_Transaction_Process>();
-        Connection con = new DBConnect().openERPConnection();
+        Connection con = new DBConnect().openConnection_ERP_Y();
         ResultSet rs, rs1 = null;
         PreparedStatement p = null;
         //Random r = new Random();

@@ -11,7 +11,7 @@ public class PeriodDate {
         String SQL = " select * from mperiod where doc_type = '" + doc_type + "'";
         String Return_Value = "";
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs ;
         try {
             rs = con.createStatement().executeQuery(SQL);
@@ -34,7 +34,7 @@ public class PeriodDate {
         String SQL = " select * from mperiod where doc_type = '" + doc_type + "'";
         String Return_Value = "";
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs ;
         try {
             rs = con.createStatement().executeQuery(SQL);
@@ -57,7 +57,7 @@ public class PeriodDate {
         String SQL = " select * from mperiod where doc_type = '" + doc_type + "'";
         String Return_Value = "";
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs ;
         try {
             rs = con.createStatement().executeQuery(SQL);
@@ -80,7 +80,7 @@ public class PeriodDate {
         String SQL = " select * from mperiod where doc_type = '" + doc_type + "'";
         String Return_Value = "";
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs ;
         try {
             rs = con.createStatement().executeQuery(SQL);
@@ -103,7 +103,7 @@ public class PeriodDate {
         String SQL = " select * from mmonth where month_id = '" + month + "'";
         String Return_Value = "";
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs ;
 
         String language;
@@ -154,7 +154,7 @@ public class PeriodDate {
         String SQL = " select * from mmonth where month_id = '" + month + "'";
         String Return_Value = "";
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs ;
         try {
             rs = con.createStatement().executeQuery(SQL);

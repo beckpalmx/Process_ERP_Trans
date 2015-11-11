@@ -22,8 +22,8 @@ public class Transfer_MProduct_Price {
 
     public void generater_transaction_process(String date_from, String date_to, String process_id, String table, String doc_type, String r, String username) throws Exception {
 
-        Connection con = new DBConnect().openERPConnection();
-        Connection con1 = new DBConnect().openERPConnection();
+        Connection con = new DBConnect().openConnection_ERP_Y();
+        Connection con1 = new DBConnect().openConnection_ERP_Y();
         ResultSet rs = null;
         PreparedStatement p = null;
         PreparedStatement p1 = null;

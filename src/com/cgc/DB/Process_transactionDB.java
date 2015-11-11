@@ -26,8 +26,8 @@ public class Process_transactionDB {
 
     public void generater_transaction_process(String date_from, String date_to, String process_id, String table, String doc_type, String r, String username) throws Exception {
         ArrayList<DataBean_Transaction_Process> obj_AL_process_transaction = new ArrayList<>();
-        Connection con = new DBConnect().openERPConnection();
-        Connection con2 = new DBConnect().openERPConnection();
+        Connection con = new DBConnect().openConnection_ERP_Y();
+        Connection con2 = new DBConnect().openConnection_ERP_Y();
         ResultSet rs, rs1, rs2 ;
         PreparedStatement p = null ;
 
@@ -443,7 +443,7 @@ public class Process_transactionDB {
 
     public void update_data() throws Exception {
         DBConnect dbConnect = new DBConnect();
-        Connection con = dbConnect.openCMMSConnection();
+        Connection con = dbConnect.openConnection_CMMS_Y();
         String sql = "";
         PreparedStatement p = null;
 

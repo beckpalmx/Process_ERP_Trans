@@ -106,7 +106,7 @@ public class Process_ERP_Transaction {
         try {
             DBConnect dbConnect = new DBConnect();
             ResultSet rs;
-            Connection con = dbConnect.openERPConnection();
+            Connection con = dbConnect.openConnection_ERP_Y();
             String Select_UserAcc = "select emp_id,username,password from muser_account limit 1";
             String Update_UserAcc = "";
             PreparedStatement p;

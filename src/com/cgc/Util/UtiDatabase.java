@@ -12,7 +12,7 @@ public class UtiDatabase {
 
         int a = 0;
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             while (rs.next()) {
@@ -36,7 +36,7 @@ public class UtiDatabase {
     {
         String f = "";
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             while (rs.next()) {
@@ -62,7 +62,7 @@ public class UtiDatabase {
 
         double a = 0;
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             while (rs.next()) {
@@ -86,7 +86,7 @@ public class UtiDatabase {
     public String ShowSelectBox(String inputSQL, String Value, String ShowData, String HTMLIDandName) throws Exception {
         String output;
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             //output = "<select class=\"form-control\" name='" + HTMLIDandName + "'id='" + HTMLIDandName.trim() + "'>";            
@@ -112,7 +112,7 @@ public class UtiDatabase {
     public String ShowSelectBox(String inputSQL, String Value, String ShowData, String HTMLIDandName, String othervalue, String othershow) throws Exception {
         String output;
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             //output = "<select class=\"form-control\" name='" + HTMLIDandName + "'id='" + HTMLIDandName + "'>";            
@@ -138,7 +138,7 @@ public class UtiDatabase {
     public String ShowSelectBox_Class(String inputSQL, String Value, String ShowData, String HTMLIDandName) throws Exception {
         String output;
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             output = "<select class=\"form-control\" data-style=\"btn-info\" name='" + HTMLIDandName + "'id='" + HTMLIDandName + "'>";
@@ -165,7 +165,7 @@ public class UtiDatabase {
     public String ShowSelectBox_Class1(String inputSQL, String Value, String ShowData, String HTMLIDandName, String othervalue, String othershow) throws Exception {
         String output;
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             //output = "<select class=\"form-control\" name='" + HTMLIDandName + "'id='" + HTMLIDandName.trim() + "'>";
@@ -191,7 +191,7 @@ public class UtiDatabase {
     public String ShowSelectBox_Class2(String inputSQL, String Value, String ShowData, String HTMLIDandName, String othervalue, String othershow) throws Exception {
         String output;
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             //output = "<select class=\"form-control\" name='" + HTMLIDandName + "'id='" + HTMLIDandName.trim() + "'>";
@@ -217,7 +217,7 @@ public class UtiDatabase {
     public String ShowSelectBox_Class3(String inputSQL, String Value, String ShowData, String HTMLIDandName) throws Exception {
         String output;
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             output = "<select class=\"selectpicker\" name='" + HTMLIDandName + "'id='" + HTMLIDandName + "'>";
@@ -244,7 +244,7 @@ public class UtiDatabase {
     public String ShowSelectBox_Bootstrap(String inputSQL, String Value, String ShowData, String HTMLIDandName, String data, String tooltip_text) throws Exception {
         String output;
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             output = "<select class=\"selectpicker multiple\" name='" + HTMLIDandName + "' id='" + HTMLIDandName.trim() + "'" + " data-toggle=\"tooltip\" title= '" + tooltip_text + "'>";
@@ -291,7 +291,7 @@ public class UtiDatabase {
     public String ShowSelectBoxSearch(String inputSQL, String Value, String ShowData, String HTMLIDandName) throws Exception {
         String output;
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = con.createStatement().executeQuery(inputSQL);
         try {
             output = "<select class='select_cgc' name='" + HTMLIDandName + "'id='" + HTMLIDandName + "' onclick=SelectBoxSearch(\'" + Value + "\',\'" + HTMLIDandName + "\','stadment')>";
@@ -313,7 +313,7 @@ public class UtiDatabase {
     public String RunLine_no(String Table_name, String Doc_id) throws Exception {
         String Str_Line_no = "", SQL = "";
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         SQL = "Select line_no from " + Table_name + " where doc_id = '" + Doc_id + "' and delete_flag = 'N'  order by to_number(line_no,'999') desc";
         ResultSet rs = null;
         try {
@@ -453,7 +453,7 @@ public class UtiDatabase {
     public String Last_Create_Date(String Table_name) throws Exception {
         String Str_Return = "";
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         String inputSQL = " select create_date From " + Table_name + " order by runno desc limit 1";
         ResultSet rs = null;
         try {
@@ -478,7 +478,7 @@ public class UtiDatabase {
     public String Last_Create_Date2(String inputSQL) throws Exception {
         String Str_Return = "";
         DBConnect objcon = new DBConnect();
-        Connection con = objcon.openERPConnection();
+        Connection con = objcon.openConnection_ERP_Y();
         ResultSet rs = null;
         try {
             rs = con.createStatement().executeQuery(inputSQL);

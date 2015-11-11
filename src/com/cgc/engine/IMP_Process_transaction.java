@@ -23,7 +23,7 @@ public class IMP_Process_transaction {
      * @param args the command line arguments
      */
     public String main_check(String doc_date_from, String doc_date_to, String username, String process_for) throws Exception {
-        Connection Conn = new DBConnect().openERPConnection();
+        Connection Conn = new DBConnect().openConnection_ERP_Y();
         StringBuffer String_return = new StringBuffer();
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy h:mm:ss");
         Timestamp cur_time = new Timestamp(new java.util.Date().getTime());
