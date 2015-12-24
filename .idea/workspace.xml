@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d4d5a78-1ee5-4cbd-a4a9-b3c91bf0e068" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/cgc/engine/Process_transaction_new.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Process_ERP_Transaction/com/cgc/DB/Check_MProduct_Price.class" afterPath="$PROJECT_DIR$/out/production/Process_ERP_Transaction/com/cgc/DB/Check_MProduct_Price.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Process_ERP_Transaction/com/cgc/DB/Check_MRawmat_Price.class" afterPath="$PROJECT_DIR$/out/production/Process_ERP_Transaction/com/cgc/DB/Check_MRawmat_Price.class" />
-      <change type="MODIFICATION" beforePath="D:\workspace_intellij\Process_ERP_Transaction\out\production\Process_ERP_Transaction\Process_ERP_Transaction.class" afterPath="D:\workspace_intellij\Process_ERP_Transaction\out\production\Process_ERP_Transaction\Process_ERP_Transaction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Process_ERP_Transaction_jar/Process_ERP_Transaction.jar" afterPath="$PROJECT_DIR$/out/artifacts/Process_ERP_Transaction_jar/Process_ERP_Transaction.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Process_ERP_Transaction/com/cgc/engine/Process_transaction.class" afterPath="$PROJECT_DIR$/out/production/Process_ERP_Transaction/com/cgc/engine/Process_transaction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cgc/DB/Check_MProduct_Price.java" afterPath="$PROJECT_DIR$/src/com/cgc/DB/Check_MProduct_Price.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cgc/DB/Check_MRawmat_Price.java" afterPath="$PROJECT_DIR$/src/com/cgc/DB/Check_MRawmat_Price.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Process_ERP_Transaction.java" afterPath="$PROJECT_DIR$/src/Process_ERP_Transaction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cgc/engine/Process_transaction.java" afterPath="$PROJECT_DIR$/src/com/cgc/engine/Process_transaction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cgc/DB/Transfer_MProduct_Price.java" afterPath="$PROJECT_DIR$/src/com/cgc/DB/Transfer_MProduct_Price.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/cgc/DB/Transfer_MRawmat_Price.java" afterPath="$PROJECT_DIR$/src/com/cgc/DB/Transfer_MRawmat_Price.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cgc_config.xml" afterPath="$PROJECT_DIR$/cgc_config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="7d4d5a78-1ee5-4cbd-a4a9-b3c91bf0e068" name="Default" comment="" />
     <ignored path="Process_ERP_Transaction.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,62 +23,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Check_MProduct_Price.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Check_MProduct_Price.java">
+      <file leaf-file-name="Process_transaction_new.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/cgc/engine/Process_transaction_new.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="71" />
-              <folding>
-                <marker date="1450928709615" expanded="true" signature="1144:1217" placeholder="select * fro..vproduct..." />
-                <marker date="1450928709615" expanded="true" signature="1377:1662" placeholder="select count..missingValue..." />
-                <marker date="1450928709615" expanded="true" signature="1768:1885" placeholder="INSERT INTO ..." />
-                <marker date="1450928709615" expanded="true" signature="2548:2935" placeholder="update missi..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Check_MRawmat_Price.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Check_MRawmat_Price.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="82" column="63" selection-start-line="82" selection-start-column="63" selection-end-line="82" selection-end-column="63" />
-              <folding>
-                <marker date="1450928723786" expanded="true" signature="1143:1207" placeholder="select * fro..vproduct..." />
-                <marker date="1450928723786" expanded="true" signature="1367:1652" placeholder="select count..missingValue..." />
-                <marker date="1450928723786" expanded="true" signature="1825:1942" placeholder="INSERT INTO ..." />
-                <marker date="1450928723786" expanded="true" signature="2676:3063" placeholder="update missi..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transfer_MProduct_Price.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Transfer_MProduct_Price.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="26" selection-end-column="71" />
-              <folding>
-                <marker date="1450928902386" expanded="true" signature="1490:1620" placeholder="select * fro..missingValue..." />
-                <marker date="1450928902386" expanded="true" signature="1838:2231" placeholder="select count..missingValue..." />
-                <marker date="1450928902386" expanded="true" signature="2616:3183" placeholder="INSERT INTO ..." />
-                <marker date="1450928902386" expanded="true" signature="4804:5275" placeholder="update missi..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transfer_MRawmat_Price.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Transfer_MRawmat_Price.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8298217">
-              <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-              <folding>
-                <marker date="1450928948341" expanded="true" signature="1436:1565" placeholder="select * fro..missingValue..." />
-                <marker date="1450928948341" expanded="true" signature="1783:2178" placeholder="select count..missingValue..." />
-                <marker date="1450928948341" expanded="true" signature="2561:3128" placeholder="INSERT INTO ..." />
-                <marker date="1450928948341" expanded="true" signature="4749:5222" placeholder="update missi..." />
-              </folding>
+            <state vertical-scroll-proportion="-0.48298216">
+              <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -253,7 +188,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DB" />
+              <option name="myItemId" value="engine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -638,16 +573,16 @@
       <workItem from="1450420098595" duration="1156000" />
       <workItem from="1450919310035" duration="4444000" />
       <workItem from="1450924491223" duration="763000" />
-      <workItem from="1450926557562" duration="2992000" />
+      <workItem from="1450926557562" duration="3655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23231000" />
+    <option name="totallyTimeSpent" value="23894000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1083,14 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cgc/engine/Process_transaction_new.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6042654">
-          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Process_ERP_Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4265403">
@@ -1098,19 +1025,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1450926963199" expanded="true" signature="-1:-1" placeholder="select emp_i..muser_account..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Check_MRawmat_Price.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="63" selection-start-line="82" selection-start-column="63" selection-end-line="82" selection-end-column="63" />
-          <folding>
-            <marker date="1450928723786" expanded="true" signature="1143:1207" placeholder="select * fro..vproduct..." />
-            <marker date="1450928723786" expanded="true" signature="1367:1652" placeholder="select count..missingValue..." />
-            <marker date="1450928723786" expanded="true" signature="1825:1942" placeholder="INSERT INTO ..." />
-            <marker date="1450928723786" expanded="true" signature="2676:3063" placeholder="update missi..." />
           </folding>
         </state>
       </provider>
@@ -1133,42 +1047,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Check_MProduct_Price.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Transfer_MRawmat_Price.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="71" />
+        <state vertical-scroll-proportion="2.580227">
+          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
           <folding>
-            <marker date="1450928709615" expanded="true" signature="1144:1217" placeholder="select * fro..vproduct..." />
-            <marker date="1450928709615" expanded="true" signature="1377:1662" placeholder="select count..missingValue..." />
-            <marker date="1450928709615" expanded="true" signature="1768:1885" placeholder="INSERT INTO ..." />
-            <marker date="1450928709615" expanded="true" signature="2548:2935" placeholder="update missi..." />
+            <marker date="1450928948341" expanded="true" signature="-1:-1" placeholder="select * fro..missingValue..." />
+            <marker date="1450928948341" expanded="true" signature="-1:-1" placeholder="select count..missingValue..." />
+            <marker date="1450928948341" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1450928948341" expanded="true" signature="-1:-1" placeholder="update missi..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Transfer_MProduct_Price.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.36466774">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="26" selection-end-column="71" />
           <folding>
-            <marker date="1450928902386" expanded="true" signature="1490:1620" placeholder="select * fro..missingValue..." />
-            <marker date="1450928902386" expanded="true" signature="1838:2231" placeholder="select count..missingValue..." />
-            <marker date="1450928902386" expanded="true" signature="2616:3183" placeholder="INSERT INTO ..." />
-            <marker date="1450928902386" expanded="true" signature="4804:5275" placeholder="update missi..." />
+            <marker date="1450928902386" expanded="true" signature="-1:-1" placeholder="select * fro..missingValue..." />
+            <marker date="1450928902386" expanded="true" signature="-1:-1" placeholder="select count..missingValue..." />
+            <marker date="1450928902386" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1450928902386" expanded="true" signature="-1:-1" placeholder="update missi..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Transfer_MRawmat_Price.java">
+    <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Check_MRawmat_Price.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8298217">
-          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.110210694">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
           <folding>
-            <marker date="1450928948341" expanded="true" signature="1436:1565" placeholder="select * fro..missingValue..." />
-            <marker date="1450928948341" expanded="true" signature="1783:2178" placeholder="select count..missingValue..." />
-            <marker date="1450928948341" expanded="true" signature="2561:3128" placeholder="INSERT INTO ..." />
-            <marker date="1450928948341" expanded="true" signature="4749:5222" placeholder="update missi..." />
+            <marker date="1450928723786" expanded="true" signature="-1:-1" placeholder="select * fro..vproduct..." />
+            <marker date="1450928723786" expanded="true" signature="-1:-1" placeholder="select count..missingValue..." />
+            <marker date="1450928723786" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1450928723786" expanded="true" signature="-1:-1" placeholder="update missi..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cgc/DB/Check_MProduct_Price.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36466774">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="71" />
+          <folding>
+            <marker date="1450928709615" expanded="true" signature="-1:-1" placeholder="select * fro..vproduct..." />
+            <marker date="1450928709615" expanded="true" signature="-1:-1" placeholder="select count..missingValue..." />
+            <marker date="1450928709615" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1450928709615" expanded="true" signature="-1:-1" placeholder="update missi..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cgc/engine/Process_transaction_new.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.48298216">
+          <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
