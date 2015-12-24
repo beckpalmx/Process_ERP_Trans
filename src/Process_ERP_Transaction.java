@@ -3,7 +3,7 @@ import com.cgc.Util.DateUtil;
 import com.cgc.Util.OS_Type;
 import com.cgc.Util.PeriodDate;
 import com.cgc.engine.IMP_Process_transaction;
-import com.cgc.engine.Process_transaction;
+import com.cgc.engine.Process_transaction_new;
 import org.apache.commons.codec.binary.Base64;
 
 import java.sql.Connection;
@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Random;
 
 public class Process_ERP_Transaction {
 
@@ -33,7 +34,7 @@ public class Process_ERP_Transaction {
     private static void Process_Transaction() {
         try {
 
-            Process_transaction objcom = new Process_transaction();
+            Process_transaction_new objcom = new Process_transaction_new();
             IMP_Process_transaction objImp = new IMP_Process_transaction();
 
             String username = "System", process_for;
@@ -65,8 +66,12 @@ public class Process_ERP_Transaction {
 
             for (int Count = 1; Count <= 2; Count++) {
                 process_for = (Count == 1 ? "WAREHOUSE" : "RAWMAT");
+
+                Random r = new Random();
+                String r_create = Long.toString(Math.abs(r.nextLong()), 36);
+
                 System.out.println("process_for " + process_for + " Loop " + Count);
-                objcom.main_check(date_from, date_to, username, process_for);
+                objcom.main_check(date_from, date_to, username, process_for,r_create);
             }
 
             date_from = DaTeU.ThaiDate_To_ThaiDate(date_from);
