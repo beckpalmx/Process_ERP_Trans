@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Process_ERP_Transaction">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/Process_ERP_Transaction_jar/Process_ERP_Transaction.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
